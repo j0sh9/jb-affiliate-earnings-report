@@ -49,6 +49,7 @@ function jb_affilaite_earnings_report_html() {
 	$end_url = str_replace('-','%2f',date('m-d-Y',strtotime($end_date)));
 	$start_name = date('Ymd',strtotime($start_date));
 	$end_name = date('Ymd',strtotime($end_date));
+	$file_name = get_bloginfo('name')." affiliate earnings report $start_name-$end_name";
 ?>
 
 		<form action="" method="post">
@@ -61,6 +62,7 @@ function jb_affilaite_earnings_report_html() {
 		</form>
 		
 		<table class="jb-affiliate-report" id="affiliateEarningReport">
+			<tr><th><?=$file_name?></th></tr>
 		<tr><th>Affiliate</th><th>Aff ID</th><th>Referrals</th><th>Volume</th><th>Commissions</th><th>1% Override</th></tr>
 
 
@@ -207,7 +209,7 @@ echo "</table></div>";
 
             // This must be a hyperlink
             jQuery("#downloadReport").click(function (event) {
-                var outputFile = "<?=get_bloginfo('name')?> affiliate earnings report <?=$start_name;?>-<?=$end_name;?>.csv";
+                var outputFile = "<?=$file_name?>.csv";
                 //var outputFile = window.prompt("What do you want to name your output file (Note: This won't have any effect on Safari)") || 'export';
                 //outputFile = outputFile.replace('.csv','') + '.csv'
                  
