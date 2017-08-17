@@ -72,7 +72,7 @@ function jb_affilaite_earnings_report_html() {
 	$aff_args = array(
 		'number'       => -1,
 //		'offset'       => 0,
-//		'exclude'      => array('1','252244'),
+		'exclude'      => array('1','16','19','252244'),
 //		'user_id'      => 0,
 //		'affiliate_id' => 0,
 //		'status'       => '',
