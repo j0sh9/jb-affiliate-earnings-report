@@ -41,7 +41,7 @@ function jb_affilaite_earnings_report_html() {
 		$end_date = $_POST['end_date'].' 23:59:59';
 		$referral_status = $_POST['referral_status'];
 	} else {
-		$start_date = date('Y-m-d');
+		$start_date = date('Y-m-d 00:00:00');
 		$end_date = date('Y-m-d 23:59:59');
 		$referral_status = '';
 	}
@@ -71,14 +71,14 @@ function jb_affilaite_earnings_report_html() {
 	$affiliates_db = new Affiliate_WP_DB_Affiliates();
 	$aff_args = array(
 		'number'       => -1,
-		'offset'       => 0,
-		'exclude'      => array('1','252244'),
-		'user_id'      => 0,
-		'affiliate_id' => 0,
-		'status'       => '',
-		'order'        => 'ASC',
-		'orderby'      => 'affiliate_id',
-		'fields'       => '',
+		//'offset'       => 0,
+		//'exclude'      => array('1','252244'),
+		//'user_id'      => 0,
+		//'affiliate_id' => 0,
+		//'status'       => '',
+		//'order'        => 'ASC',
+		//'orderby'      => 'affiliate_id',
+		//'fields'       => '',
 	);
 	$affiliates = $affiliates_db->get_affiliates( $aff_args );
 	foreach ( $affiliates as $affiliate ) {
