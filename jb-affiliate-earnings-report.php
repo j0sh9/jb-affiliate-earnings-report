@@ -76,8 +76,8 @@ function jb_affilaite_earnings_report_html() {
 		//'user_id'      => 0,
 		//'affiliate_id' => 0,
 		//'status'       => '',
-		//'order'        => 'ASC',
-		//'orderby'      => 'affiliate_id',
+		'order'        => 'ASC',
+		'orderby'      => 'affiliate_id',
 		//'fields'       => '',
 	);
 	$affiliates = $affiliates_db->get_affiliates( $aff_args );
