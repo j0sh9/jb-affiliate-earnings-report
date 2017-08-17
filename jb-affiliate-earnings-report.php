@@ -71,11 +71,11 @@ function jb_affilaite_earnings_report_html() {
 	$affiliates_db = new Affiliate_WP_DB_Affiliates();
 	$aff_args = array(
 		'number'       => -1,
-		//'offset'       => 0,
-		//'exclude'      => array('1','252244'),
-		//'user_id'      => 0,
-		//'affiliate_id' => 0,
-		//'status'       => '',
+//		'offset'       => 0,
+//		'exclude'      => array('1','252244'),
+//		'user_id'      => 0,
+//		'affiliate_id' => 0,
+//		'status'       => '',
 		'order'        => 'ASC',
 		'orderby'      => 'affiliate_id',
 		//'fields'       => '',
@@ -114,10 +114,15 @@ function jb_affilaite_earnings_report_html() {
 		foreach ( $referrals as $referral ) {
 			$ref_number = $referral->referral_id;
 			$order = wc_get_order($referral->reference);
+			if ( $order ) {
+				$order_vol = $order->get_total();
+			} else {
+				$order_vol = 0;
+			}
 			
 			if ( $referral->status != 'rejected' ) {
 				$ref_total = $ref_total + $referral->amount;
-				$order_total = $order_total + $order->get_total();
+				$order_total = $order_total + $order_vol;
 			}
 		}
 		?>
