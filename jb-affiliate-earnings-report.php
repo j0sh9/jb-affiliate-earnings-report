@@ -7,6 +7,7 @@ Version: 1.0
 
 add_action( 'admin_menu', 'jb_affiliate_earnings_report' );
 function jb_affiliate_earnings_report() {
+	$jb_parent_slug = 'affiliate-wp';
 	$jb_page_title = 'Affiliate Basic Earnings Report';
 	$jb_menu_title = 'Basic Earnings';
 	$jb_capability = 'manage_affiliates';
