@@ -7,8 +7,8 @@ Version: 1.0
 
 add_action( 'admin_menu', 'jb_affiliate_earnings_report' );
 function jb_affiliate_earnings_report() {
-	$jb_page_title = 'Affiliate Simple Report';
-	$jb_menu_title = 'Affiliate Simple Report';
+	$jb_page_title = 'Affiliate Basic Earnings Report';
+	$jb_menu_title = 'Basic Earnings';
 	$jb_capability = 'manage_affiliates';
 	$jb_menu_slug = 'jb-affiliate-earnings';
 	$jb_callback = 'jb_affilaite_earnings_report_html';
