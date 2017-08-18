@@ -7,14 +7,12 @@ Version: 1.0
 
 add_action( 'admin_menu', 'jb_affiliate_earnings_report' );
 function jb_affiliate_earnings_report() {
-	$jb_page_title = 'Affiliate Earnings Report';
-	$jb_menu_title = 'Affiliate Earnings';
+	$jb_page_title = 'Affiliate Simple Report';
+	$jb_menu_title = 'Affiliate Simple Report';
 	$jb_capability = 'manage_affiliates';
 	$jb_menu_slug = 'jb-affiliate-earnings';
 	$jb_callback = 'jb_affilaite_earnings_report_html';
-	$jb_icon_url = 'dashicons-chart-pie';
-	$jb_menu_position = 120;
-	add_menu_page(  $jb_page_title,  $jb_menu_title,  $jb_capability,  $jb_menu_slug,  $jb_callback,  $jb_icon_url,  $jb_menu_position );
+	add_submenu_page(  $jb_parent_slug, $jb_page_title,  $jb_menu_title,  $jb_capability,  $jb_menu_slug,  $jb_callback );
 }
 
 function jb_affilaite_earnings_report_html() {
