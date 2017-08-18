@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: _Affiliate Earnings Report
+Plugin Name: _Affiliate Basic Earnings Report
 Description: Admin Page for affilaite reports and overrides
 Version: 1.0
 */
